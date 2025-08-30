@@ -1,6 +1,8 @@
 extends Area2D
 
-const SPEED = 250
+const SPEED = 500
+
+@export var onScreenNotifier:VisibleOnScreenNotifier2D
 
 var velocity = Vector2(0, 0)
 
@@ -14,3 +16,7 @@ func _physics_process(delta: float) -> void:
 func fire():
 	velocity.x = SPEED
 	pass
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
+	pass # Replace with function body.

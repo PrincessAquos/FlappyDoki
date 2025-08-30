@@ -1,8 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bttt2usg2qxeu"]
+[gd_scene load_steps=3 format=3 uid="uid://cgw1e8rv0fa70"]
 
-[ext_resource type="PackedScene" uid="uid://chtiv810qvrom" path="res://testing/test-character.tscn" id="1_gk2j4"]
+[ext_resource type="Script" uid="uid://d1ssclnsvfrjh" path="res://testing/test_level.gd" id="1_m50pi"]
+[ext_resource type="PackedScene" uid="uid://b5x5vsok4ufgu" path="res://obstacle.tscn" id="2_m50pi"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Test-level" type="Node2D"]
+script = ExtResource("1_m50pi")
 
-[node name="Node2D" parent="." instance=ExtResource("1_gk2j4")]
-position = Vector2(106, 282)
+[node name="Obstacle" parent="." instance=ExtResource("2_m50pi")]
+position = Vector2(424, 806)
+
+[node name="Obstacle2" parent="." instance=ExtResource("2_m50pi")]
+position = Vector2(425, -235)
+
+[node name="Obstacle3" parent="." instance=ExtResource("2_m50pi")]
+position = Vector2(931, 951)
+
+[node name="Obstacle4" parent="." instance=ExtResource("2_m50pi")]
+position = Vector2(931, -116)
+
+[node name="Obstacle5" parent="." instance=ExtResource("2_m50pi")]
+position = Vector2(1419, 746)
+
+[node name="Obstacle6" parent="." instance=ExtResource("2_m50pi")]
+position = Vector2(1419, -305)
