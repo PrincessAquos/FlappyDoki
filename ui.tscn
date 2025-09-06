@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp3j4he5rgs1t"]
+
+[ext_resource type="Texture2D" uid="uid://bn8a4sfr7l72r" path="res://icon.svg" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://cgo6tj47i3kvv" path="res://ui.gd" id="1_m6e0p"]
+
+[node name="UI" type="Node2D" node_paths=PackedStringArray("healthNodes")]
+script = ExtResource("1_m6e0p")
+healthNodes = [NodePath("Icon"), NodePath("Icon2"), NodePath("Icon3")]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(18.784, 0.5, 0.5, 1)
+position = Vector2(57, 58)
+scale = Vector2(0.668, 0.668)
+texture = ExtResource("1_fyqef")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+modulate = Color(18.784, 0.5, 0.5, 1)
+position = Vector2(157, 58)
+scale = Vector2(0.668, 0.668)
+texture = ExtResource("1_fyqef")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+modulate = Color(18.784, 0.5, 0.5, 1)
+position = Vector2(259, 58)
+scale = Vector2(0.668, 0.668)
+texture = ExtResource("1_fyqef")

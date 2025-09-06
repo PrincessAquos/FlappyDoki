@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bttt2usg2qxeu"]
+[gd_scene load_steps=5 format=3 uid="uid://bttt2usg2qxeu"]
 
 [ext_resource type="Script" uid="uid://ca78j2od3s7cv" path="res://testing/test_game.gd" id="1_1g8x0"]
 [ext_resource type="PackedScene" uid="uid://chtiv810qvrom" path="res://testing/test-character.tscn" id="1_gk2j4"]
 [ext_resource type="PackedScene" uid="uid://cgw1e8rv0fa70" path="res://testing/test-level.tscn" id="3_l765v"]
+[ext_resource type="PackedScene" uid="uid://bp3j4he5rgs1t" path="res://ui.tscn" id="4_l765v"]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("player", "level")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("player", "level", "ui")]
 script = ExtResource("1_1g8x0")
 player = NodePath("Node2D")
 level = NodePath("Test-level")
+ui = NodePath("UI")
 
 [node name="Node2D" parent="." instance=ExtResource("1_gk2j4")]
 position = Vector2(106, 282)
 
 [node name="Test-level" parent="." instance=ExtResource("3_l765v")]
 position = Vector2(377, 0)
+
+[node name="UI" parent="." instance=ExtResource("4_l765v")]
